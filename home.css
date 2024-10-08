@@ -1,0 +1,933 @@
+*{
+    top: 0;
+    margin: 0;
+    padding: 0;
+  }
+    /* navbar.css */
+  /* .navbar {
+    background-color: #0d0d0d; 
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  } */
+  
+  
+  
+  .navbar {
+    background: linear-gradient(125deg, rgb(19, 19, 19), #0e5547, #83e0e0);
+    background-size: 300% 300%; 
+    padding: 15px 30px; 
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; 
+  }
+  /* 
+  .navbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .navbar:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px; 
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; 
+    animation: pulse 4s infinite; 
+  }
+  
+  
+  @keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+  }
+  
+  
+  @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+  
+  
+  .navbar {
+    animation: gradientAnimation 15s ease infinite; 
+  }
+  
+   */
+  
+  
+  
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-weight: bold;
+    color: #00ffcc; /* Neon green */
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+  
+  .logo:hover {
+    color: #9de4e4;
+  }
+  
+  .navMenu {
+    display: flex;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navItem {
+    margin-left: 30px;
+  }
+  
+  .navLink {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .navLink:hover {
+    border-bottom: 2px solid #00ffcc;
+    color: #00ffcc;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #00ffcc;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .navMenu {
+      position: absolute;
+      top: 60px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 60px);
+      background-color: #0d0d0d;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+  
+    .navMenu.active {
+      left: 0;
+    }
+  
+    .navItem {
+      margin: 20px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap');
+.home-page{
+    /* margin-top: 70px;
+    margin-left: 290px; */
+    height: 670px;
+    color: white;
+    background-color: rgb(31, 30, 30);
+}
+.home-box1{
+    position: absolute;
+    margin-top: 70px;
+    text-align: center;
+}
+.home-head{
+    /* line-height: 30px; */
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-left: 300px;
+    font-family: "Libre Baskerville", serif;
+    animation: slideIn 1.5s ease-out forwards;
+}
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0); /* End at its normal position */
+  }
+}
+.home-head .glod-heading{
+    color: #00ffcc;
+}
+.home-box1 p{
+    margin-bottom: 40px;
+    margin-left: 260px;
+    animation: slideInFromRight 1.5s ease-out forwards;
+}
+@keyframes slideInFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0); /* End at its normal position */
+  }
+}
+/* .home-btn1{
+    padding: 15px 60px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color:#00ffcc;
+    color: white;
+    margin-left: 260px;
+    
+}
+.home-btn1:hover{
+    padding: 17px 70px;
+    background-color:#8cf7e1;
+    color: black;
+} */
+
+.home-btn1 {
+  padding: 15px 60px;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: #00ffcc;
+  color: white;
+  margin-left: 260px;
+  display: inline-block; /* Ensure it's block-level for the animation */
+  position: relative; /* Position relative for animation */
+  animation: slideInFromLeft 1.5s ease-out forwards; /* Add animation */
+}
+
+/* Define the keyframes for the slide-in-from-left effect */
+@keyframes slideInFromLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0); /* End at its normal position */
+  }
+}
+
+.home-btn1:hover {
+  padding: 17px 70px;
+  background-color: #8cf7e1;
+  color: black;
+  transition: padding 0.3s, background-color 0.3s, color 0.3s ease; /* Smooth hover transition */
+}
+
+.brand-box{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 450px;    
+    
+}
+/* .brand-box img{
+    height: 30px;
+    margin-left: 20px;
+} */
+
+.brand-box img {
+  height: 30px;
+  margin-left: 20px;
+  position: relative; /* Required for animation */
+  animation: slideInFromRight 1.5s ease-out forwards; /* Add animation */
+}
+
+/* Define the keyframes for the slide-in-from-right effect */
+@keyframes slideInFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0); /* End at its normal position */
+  }
+}
+
+
+
+
+.home-about{
+    margin-top: 140px;
+    display: flex;  
+}
+
+
+.img-box {
+  background-color: black;
+  height: 700px;
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  overflow: hidden;
+}
+
+.img1, .img2, .img3 {
+  transition: transform 0.5s ease, box-shadow 0.3s ease; /* Smooth hover and transformation */
+  border-radius: 10px;
+}
+
+/* Animating the images on page load */
+@keyframes imgSlideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.img1 {
+  height: 300px;
+  width: 250px;
+  animation: imgSlideIn 1s ease-out forwards; /* Add animation */
+  margin-top: -20px;
+  margin-left: -100px;
+}
+
+.img2 {
+  height: 250px;
+  width: 200px;
+  margin-left: -400px;
+  margin-top: 320px;
+  z-index: 2;
+  animation: imgSlideIn 1.2s ease-out forwards; /* Delay animation slightly */
+}
+
+.img3 {
+  height: 200px;
+  width: 300px;
+  margin-left: 150px;
+  margin-top: -300px;
+  animation: imgSlideIn 1.4s ease-out forwards; /* Further delay animation */
+}
+
+/* Hover Effects */
+.img1:hover, .img2:hover, .img3:hover {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+
+@keyframes bgPulse {
+  0% {
+    background-color: #000000;
+  }
+  50% {
+    background-color: #00ffcc;
+  }
+  100% {
+    background-color: #f7f5f5;
+  }
+}
+
+.img-box {
+  animation: bgPulse 5s infinite; /* Background pulse effect */
+}
+
+.head-para {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 50px;
+  margin-top: 40px;
+  opacity: 0; /* Start with hidden element */
+  animation: fadeIn 2s ease-in forwards; /* Apply animation */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.home-about h1{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Libre Baskerville", serif;
+    color: #6c7a49;
+    text-align: center;
+}
+.home-about p{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.head2, .head3, .head4, .head5{
+    margin-top: 30px;
+}
+.img4 {
+  width: 20%;
+  opacity: 0; /* Start invisible */
+  transform: scale(0.8) rotate(0deg); /* Start small and unrotated */
+  animation: animateImg4 3s ease-in-out forwards; /* Apply animation */
+}
+
+/* Keyframes for the animation */
+@keyframes animateImg4 {
+  0% {
+    opacity: 0; /* Fully transparent */
+    transform: scale(0.8) rotate(0deg); /* Smaller size and no rotation */
+  }
+  50% {
+    opacity: 0.5; /* Semi-transparent */
+    transform: scale(1.1) rotate(10deg); /* Slightly larger and rotated */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: scale(1) rotate(0deg); /* Original size and no rotation */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Discover Section Styles */
+.discover-section {
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+  padding: 20px;
+  color: white;
+    background-color: rgb(31, 30, 30);
+}
+
+.discover-heading {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+}
+
+.discover-description {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Grid Container Styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+/* Discover Section Styles */
+.discover-section {
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+  padding: 20px;
+  color: white;
+  background-color: rgb(31, 30, 30);
+}
+
+.discover-heading {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.discover-description {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInUp 2.5s ease-in-out;
+}
+
+/* Grid Container Styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  transform: translateY(0);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s;
+  border-radius: 10px;
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+.similar-services {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.similar-services:hover {
+  transform: scale(1.03);
+}
+
+.service-column {
+  text-align: left;
+  color: #fff;
+}
+
+.service-column h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  font-family: "Libre Baskerville", serif;
+  opacity: 0;
+  animation: fadeInUp 1.2s forwards;
+}
+
+.service-column a {
+  display: block;
+  padding: 12px 0;
+  font-size: 1.1em;
+  color: #474646;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
+  animation-delay: 0.2s;
+}
+
+.service-column a:hover {
+  color: #00ffcc;
+  transition: color 0.3s;
+}
+
+.service-column a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00ffcc;
+  transition: width 0.4s;
+}
+
+.service-column a:hover::before {
+  width: 100%;
+}
+
+/* Keyframe for smooth fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .similar-services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-column {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background: linear-gradient(125deg, rgb(19, 19, 19), #0e5547, #83e0e0);
+    background-size: 300% 300%; /* Allows for animation */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative; /* Positioning for pseudo-elements */
+    overflow: hidden; /* Hide any overflow for decorative effects */
+}
+
+.footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Adds a subtle overlay */
+    z-index: 1; /* Place above background */
+}
+
+.footer:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px; /* Circle size */
+    height: 300px; /* Circle size */
+    background: rgba(255, 255, 255, 0.2); /* White circle with opacity */
+    border-radius: 50%; /* Make it a circle */
+    transform: translate(-50%, -50%); /* Center the circle */
+    z-index: 0; /* Place behind text */
+    animation: pulse 4s infinite; /* Pulsing animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+}
+
+/* Optional: Add a smooth gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* To activate gradient animation, uncomment the following line */
+.footer {
+    animation: gradientAnimation 15s ease infinite; /* Uncomment this line for animated gradient */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-info, .quickLinks, .socialLinks {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-info h2, .quickLinks h4, .socialLinks h4 {
+    margin-bottom: 15px;
+    color: #00ffcc; /* Highlight color for headings */
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.quickLinks ul, .socialLinks ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quick-link {
+    display: flex; /* Use flexbox for icon alignment */
+    align-items: center; /* Center the icon and text */
+    justify-content: center;
+    background: none; /* Remove button background */
+    padding: 8px 0;
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.quick-link:hover {
+    color:#00ffcc; /* Change text color on hover */
+    text-decoration: underline; /* Underline effect */
+}
+
+.quick-link svg {
+    margin-right: 8px; /* Space between icon and text */
+    color: #00ffcc; /* Icon color */
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socialLinks li {
+    margin: 10px 0;
+}
+
+.social-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.social-button.facebook {
+    background: #3b5998; /* Facebook Color */
+}
+
+.social-button.twitter {
+    background: #1da1f2; /* Twitter Color */
+}
+
+.social-button.instagram {
+    background: #c32aa3; /* Instagram Color */
+}
+
+.social-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #00ffcc;
+    padding-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
